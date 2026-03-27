@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宝宝食验室 · 辅食食谱查询</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍼</text></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <div class="logo-row">
+        <span class="emoji-decor">🍼</span>
+        <div class="logo">宝宝食验室</div>
+        <span class="emoji-decor">✨</span>
+      </div>
+      <div class="subtitle">科学辅食添加 · 让宝宝爱上吃饭</div>
+    </div>
+  </header>
+
+  <!-- Page Wrapper (200px side margins) -->
+  <div class="page-wrapper">
+    <div class="main-layout">
+
+      <!-- Left Panel -->
+      <aside class="left-panel">
+        <div class="left-scroll-area">
+        <h2>🧸 宝宝基本情况</h2>
+
+        <!-- 月龄 -->
+        <div class="form-group">
+          <label class="group-label">
+            📅 月龄
+            <span class="tag" style="color:var(--coral);">必填</span>
+          </label>
+          <div class="month-grid">
+            <input type="radio" name="age" id="age-6"  value="6">
+            <label for="age-6">6月</label>
+            <input type="radio" name="age" id="age-7"  value="7">
+            <label for="age-7">7月</label>
+            <input type="radio" name="age" id="age-8"  value="8" checked>
+            <label for="age-8">8月</label>
+            <input type="radio" name="age" id="age-9"  value="9">
+            <label for="age-9">9月</label>
+            <input type="radio" name="age" id="age-10" value="10">
+            <label for="age-10">10月</label>
+            <input type="radio" name="age" id="age-11" value="11">
+            <label for="age-11">11月</label>
+            <input type="radio" name="age" id="age-12" value="12">
+            <label for="age-12">12月</label>
+          </div>
+        </div>
+
+        <!-- 出牙情况 -->
+        <div class="form-group">
+          <label class="group-label">🦷 出牙情况</label>
+          <div class="radio-pills">
+            <input type="radio" name="teething" id="teeth-no"  value="no" checked>
+            <label for="teeth-no">未出牙</label>
+            <input type="radio" name="teething" id="teeth-yes" value="yes">
+            <label for="teeth-yes">已出牙</label>
+          </div>
+        </div>
+
+        <!-- 性别 -->
+        <div class="form-group">
+          <label class="group-label">👶 性别</label>
+          <div class="radio-pills">
+            <input type="radio" name="gender" id="gender-boy"  value="boy" checked>
+            <label for="gender-boy">👦 弟弟</label>
+            <input type="radio" name="gender" id="gender-girl" value="girl">
+            <label for="gender-girl">👧 妹妹</label>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- 已排敏食材 -->
+        <div class="form-group">
+          <label class="group-label">
+            ✅ 已排敏食材
+            <span class="tag" style="color:var(--sage-dark);">多选</span>
+          </label>
+          <div class="select-all-row">
+            <button class="select-all-btn" id="btn-select-all-tested">全选</button>
+          </div>
+          <div id="tested-container"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- 已知过敏食材 -->
+        <div class="form-group">
+          <label class="group-label">
+            ⚠️ 已知过敏食材
+            <span class="tag" style="color:var(--coral);">将被规避</span>
+          </label>
+          <div class="select-all-row">
+            <button class="select-all-btn" id="btn-clear-allergen">清除选择</button>
+          </div>
+          <div id="allergen-container"></div>
+        </div>
+
+        </div><!-- /.left-scroll-area -->
+
+        <!-- Submit Button (sticky bottom) -->
+        <div class="btn-submit-wrapper">
+          <button class="btn-submit" id="btn-submit">
+            🔍 查看食谱
+          </button>
+        </div>
+      </aside>
+
+      <!-- Right Panel -->
+      <main class="right-panel">
+        <div id="right-content">
+          <div class="empty-state">
+            <div class="empty-icon">🥣</div>
+            <h3>还没有食谱哦～</h3>
+            <p>请在左侧填写宝宝的基本情况<br>点击「查看食谱」为宝宝定制专属辅食方案 ✦</p>
+          </div>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
